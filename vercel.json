@@ -1,0 +1,55 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/vaste-wekelijkse-activiteiten", "destination": "/activiteiten", "permanent": true },
+    { "source": "/seniorencommissie", "destination": "/activiteiten#senioren", "permanent": true },
+    { "source": "/meet2golf", "destination": "/activiteiten#meet-2-golf", "permanent": true },
+    { "source": "/kieften", "destination": "/activiteiten#kieften", "permanent": true },
+    { "source": "/herenmiddag", "destination": "/activiteiten#herenmiddag", "permanent": true },
+    { "source": "/weekendcompetitie", "destination": "/activiteiten#weekendcompetitie", "permanent": true },
+    { "source": "/vrijwilligers", "destination": "/club#vrijwilligers", "permanent": true },
+    { "source": "/de-noordhollandse-golfclub", "destination": "/baan", "permanent": true },
+    { "source": "/het-bestuur", "destination": "/club#bestuur", "permanent": true },
+    { "source": "/club-van-100", "destination": "/club#club-van-100", "permanent": true },
+    { "source": "/laatste-nieuws", "destination": "/nieuws", "permanent": true },
+    { "source": "/dronevideo", "destination": "/baan#holes", "permanent": true },
+    { "source": "/course-slope-rating-dames", "destination": "/baan#handicaptabel", "permanent": true },
+    { "source": "/course-slope-rating-heren", "destination": "/baan#handicaptabel", "permanent": true },
+    { "source": "/plaatselijke-regels", "destination": "/baan#regels", "permanent": true },
+    { "source": "/hospitality-overeenkomsten", "destination": "/baan#hospitality", "permanent": true },
+    { "source": "/jeugd-lestijden", "destination": "/jeugd#lestijden", "permanent": true },
+    { "source": "/jeugd-kosten", "destination": "/jeugd#kosten", "permanent": true },
+    { "source": "/jaarplanning", "destination": "/wedstrijden", "permanent": true },
+    { "source": "/gvhj-info", "destination": "/wedstrijden#gvhj", "permanent": true },
+    { "source": "/wedstrijdreglement-algemeen", "destination": "/reglementen#algemeen", "permanent": true },
+    { "source": "/wedstrijdreglement-matchplay", "destination": "/reglementen#matchplay", "permanent": true },
+    { "source": "/wedstrijdreglement-stableford", "destination": "/reglementen#stableford", "permanent": true },
+    { "source": "/wedtrijdreglement-strokeplay", "destination": "/reglementen#strokeplay", "permanent": true },
+    { "source": "/wedstrijdregels-laddercompetitie", "destination": "/reglementen#ladder", "permanent": true },
+    { "source": "/ngf-competitie-voorjaar-2026", "destination": "/ngf-competitie", "permanent": true },
+    { "source": "/ngf-verzekeringen-voor-golfers", "destination": "/leden#verzekeringen", "permanent": true },
+    { "source": "/nieuwe-leden-informatie-faq", "destination": "/lid-worden#faq", "permanent": true },
+    { "source": "/regelexamen", "destination": "/lid-worden#regelexamen", "permanent": true },
+    { "source": "/intogolf-help", "destination": "/leden#intogolf", "permanent": true },
+    { "source": "/whs", "destination": "/leden#whs", "permanent": true },
+    { "source": "/teetimes", "destination": "/contact#teetime", "permanent": true },
+    { "source": "/privacy-verklaring", "destination": "/privacy", "permanent": true },
+    { "source": "/cookie-beleid", "destination": "/privacy#cookies", "permanent": true },
+    { "source": "/__invite", "destination": "/fotos", "permanent": true }
+  ]
+}
